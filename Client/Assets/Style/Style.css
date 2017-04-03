@@ -1,0 +1,10 @@
+h1 {
+   color: #aaafcf;
+    font-size: 200%;
+    font-family: Arial, Verdana, sans-serif;
+    text-align: center;
+}
+
+.content {
+    position: relative;
+}
