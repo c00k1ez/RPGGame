@@ -8,3 +8,10 @@ h1 {
 .content {
     position: relative;
 }
+
+@font-face {
+	font-family: "gui";
+	font-style: normal;
+	font-weight: 400;
+	src: url("../Fonts/gui.ftf");
+}
