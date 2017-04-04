@@ -6,12 +6,12 @@ h1 {
 }
 
 .content {
-    position: relative;
+    align-content: center;
 }
 
 @font-face {
 	font-family: "gui";
 	font-style: normal;
 	font-weight: 400;
-	src: url("../Fonts/gui.ftf");
+	src: url("./Client/Assets/Fonts/gui.ftf");
 }
