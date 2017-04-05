@@ -1,12 +1,23 @@
 
  class GUI {
 
-    constructor(foo : {game : Phaser.Game}) {
-        foo.game.add.text(10, 10, "123", {font: "50px arial"});
+    gameLink : {game : Phaser.Game};
+
+    constructor(gameLink : {game : Phaser.Game}) {
+        this.gameLink = gameLink;
     }
 
-    static mth(foo : {game : Phaser.Game}) {
-        foo.game.add.text(10, 10, "123", {font: "50px arial"});
+
+    public preload() {
+        this.gameLink.game.load.spritesheet("Button", "./Assets/GUI/Button.png", 416, 416);
+    }
+
+    public getGUI() {
+        this.gameLink.game.add.button(this.gameLink.game.world.centerX - 208, 200, "Button", this.actionOnClick, this, 2, 1, 0);
+    }
+
+    private actionOnClick() {
+
     }
 
 }

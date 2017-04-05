@@ -1,9 +1,14 @@
 var GUI = (function () {
-    function GUI(foo) {
-        foo.game.add.text(10, 10, "123", { font: "50px arial" });
+    function GUI(gameLink) {
+        this.gameLink = gameLink;
     }
-    GUI.mth = function (foo) {
-        foo.game.add.text(10, 10, "123", { font: "50px arial" });
+    GUI.prototype.preload = function () {
+        this.gameLink.game.load.spritesheet("Button", "./Assets/GUI/Button.png", 416, 416);
+    };
+    GUI.prototype.getGUI = function () {
+        this.gameLink.game.add.button(this.gameLink.game.world.centerX - 208, 200, "Button", this.actionOnClick, this, 2, 1, 0);
+    };
+    GUI.prototype.actionOnClick = function () {
     };
     return GUI;
 }());

@@ -14,7 +14,7 @@ class MainGame {
     }
 
     create() {
-        var button = this.game.add.button(this.game.world.centerX - 208, 200, "Button", this.actionOnClick, this, 2, 1, 0);
+        var button = this.game.add.button(this.game.world.centerX - 208, 300, "Button", this.actionOnClick, this, 2, 1, 0);
         
     }
 
